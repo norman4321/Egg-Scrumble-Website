@@ -1,0 +1,51 @@
+<%- include('partials/head'); -%>
+
+    <div id="wrapper">
+        <div style="min-height: inherit;" class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-12 container-fluid p-5">
+            <section id="content-container-login">
+                <div class="row">
+                    <h3 class="title mx-auto pb-4"> ENTER VERIFICATION CODE </h3>
+
+                </div>
+
+                <div class="row">
+                    <p class="text-center">
+                        Please Enter verification code for
+
+                    </p>
+                </div>
+
+
+                <form>
+                    <div id="display"> </div>
+                    <script src="main.js">
+                        ProcessDisplaysFPC();
+                    </script>
+                    <div class="form-group pl-2 pr-2">
+                        <label for="exampleInputEmail1">Verification Code</label>
+                        <input type="text" class="form-control" id="verificationCodeID" placeholder="Example: 6427">
+                    </div>
+
+                    <div class="row">
+                        <!-- reloads page and resends code -->
+                        <p class="mx-auto"><a href="/forgotpass" style="font-weight: 500;">Resend Code</a></p>
+                    </div>
+
+                    <div class="form-group p-2">
+                        <button onclick=ConfirmCode() type="button" class="btn-xl btn-secondary">Enter Verification Code</button>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <p class="mx-auto"><a href="/login" style="font-weight: 500;">Log In</a></p>
+                        </div>
+                        <div class="row">
+                            <p class="mx-auto"><a href="/signup" style="font-weight: 500;">Sign Up</a></p>
+                        </div>
+                    </div>
+
+                </form>
+            </section>
+        </div>
+
+        <%- include('partials/footer'); -%>
